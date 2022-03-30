@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gestion de la cave</title>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <h1>Gestion de la cave !</h1>
+  <div>
+      <h3>List stock de la cave</h3>
+      <p id="cave"></p>
+      <p>
+          <strong>Nombre de bouteilles:</strong>
+          <span id="totalBouteilles"></span>
+      </p>
+      <form>
+          <fieldset>
+            <h3>Ajouter un stock a la cave</h3>
+            <p>
+                <label for="anneeProduction">
+                    Annee production
+                    <input type="number" id="anneeProduction" min="1" />
+                </label>
+            </p><p>
+                <label for="nomDomaine">
+                    Nom de domaine
+                    <input type="text" id="nomDomaine" />
+                </label>
+            </p><p>
+                <label for="nbBouteilles">
+                    NB de bouteilles
+                    <input type="number" id="nbBouteilles" min="1" />
+                </label>
+            </p>
+            <input type="button" value="Enregistrer" id="save" onclick="return saveStock()" />
+        </fieldset>
+      </form>
+
+      <form>
+        <fieldset>
+            <h3>Diminuer le nb de bouteilles de la cave</h3>
+            <p>
+                <label for="nomDomaineR">
+                    Nom de domaine
+                    <input type="text" id="nomDomaineR" />
+                </label>
+            </p>
+            <input type="button" value="Retirer" id="save" onclick="return diminuerBouteilles()" />
+        </fieldset>
+      </form>
+  </div>
+</body>
+
+</html>
